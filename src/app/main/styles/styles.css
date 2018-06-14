@@ -1,12 +1,3 @@
-/* #home {
-  position: relative;
-  height: 100%;
-  width: 100%;
-} */
-#page-top {
-  /* margin-top: 15px!important; */
-}
-/* FADE OVERLAY FOR SCROLLING LISTS */
 .metro.scrollable div::after{
 	content: '';
 	position: absolute;
@@ -17,4 +8,129 @@
 }
 .metro.scrollable.bottom div::after{
 	opacity: 0;
+}
+
+.text-left {
+  text-align: left;  
+}
+
+.text-indent {
+  text-indent: 30px!important;
+}
+
+.btn-right {
+  margin-top: 50px;
+}
+
+.carousel {
+  height: 350px;
+  width: 100%;
+  display: inline-block;
+}
+
+.layer {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.row-wall {
+  width: 100%;
+  margin-top: -5rem;
+}
+
+.image-wall {
+  height: 500px;;
+  border: 10px solid #5d0011;
+  padding: 0;
+  margin: -4rem auto;
+  /* padding: 8rem; */
+  width: 100%;
+  /* background-color: #000;  */
+}
+
+.first-col, .third-col {
+  height: 100%;
+  width: 35%;
+  position: relative;
+  float: left;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+.second-col {
+  height: 100%;
+  width: 30%;
+  position: relative;
+  float: left;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  /* margin: 0 10px 0 0; */
+}
+
+.sm-image {
+  height: 50%;
+  width: calc(50% - 10px);
+  position: relative;
+  float: left;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  display: inline-block;
+  margin: 0 10px 10px 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background-image .35s;
+  /* background-color: green; */
+}
+
+.sm-image-right {
+  height: calc(50% - 10px);
+  width: calc(50% - 10px);
+  position: relative;
+  float: right;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  display: inline-block;
+  margin: 0px 0 0 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background-image .35s;
+}
+
+.md-image {
+  height: calc(50% - 10px);
+  width: calc(100% - 10px);
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background-image .35s;
+  /* background-color: yellow; */
+}
+
+.right-image {
+  float: right;
+}
+
+.up-image {
+  height: 50%;
+  margin: 0 0 10px 0;
+}
+
+.lg-image {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background-image .35s;
+  /* background-color: blue; */
 }

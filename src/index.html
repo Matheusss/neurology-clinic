@@ -2,21 +2,27 @@
 <html ng-app="neurology-clinic">
   <head>
     <meta charset="utf-8">
-    <title>Clínica X</title>
+    <title>NeuroTois</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
     <!--Firebase-->
-    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
     <script>
       // Initialize Firebase
       var config = {
-        apiKey: "AIzaSyDuyJzztcAkUeYc2fn29ECQZChsNvGqqJs",
-        projectId: "neurology-clinic-18"
+        apiKey: "AIzaSyBxtero1u5J0CP_7r_EJOv63gMFkvZNm0g",
+        authDomain: "neuro-top.firebaseapp.com",
+        databaseURL: "https://neuro-top.firebaseio.com",
+        projectId: "neuro-top",
+        storageBucket: "",
+        messagingSenderId: "304885422226"
       };
-      firebase.initializeApp(config);
+      if (!firebase.apps.length) {
+        firebase.initializeApp(config);
+      }
     </script>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 

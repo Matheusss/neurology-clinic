@@ -8,20 +8,20 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand page-scroll" ui-sref="home" style="cursor:pointer;">Clínica Neurológica</a>
+        <a class="navbar-brand page-scroll" ui-sref="home" style="cursor:pointer;" ng-click="methods.scrollToHash()">NeuroTois</a>
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li class="nav-item" href="#about" style="cursor:pointer;">
+          <li class="nav-item" href="#about" style="cursor:pointer;" ng-click="methods.scrollToHash('about')">
             <a class="nav-link page-scroll">Sobre</a>
           </li>
-          <li class="nav-item" href="#specialities" style="cursor:pointer;">
+          <li class="nav-item" href="#specialities" style="cursor:pointer;" ng-click="methods.scrollToHash('specialities')">
             <a class="nav-link page-scroll">Especialidades</a>
           </li>
-          <li class="nav-item" href="#professionals" style="cursor:pointer;">
+          <li class="nav-item" href="#professionals" style="cursor:pointer;" ng-click="methods.scrollToHash('professionals')">
             <a class="nav-link page-scroll">Profissionais</a>
           </li>
-          <li class="nav-item" href="#contact" style="cursor:pointer;">
+          <li class="nav-item" href="#contact" style="cursor:pointer;" ng-click="methods.scrollToHash('contact')">
             <a class="nav-link page-scroll">Contato</a>
           </li>
         </ul>
@@ -32,10 +32,10 @@
   <header class="masthead text-center text-white d-flex">
     <div class="container my-auto">
       <div class="row">
-        <h1>Clínica Neurológica X</h1>
+        <h1>A clínica mais TOP desse oeste paulista!</h1>
         <hr>
         <p></p>
-        <a href="#sobre" class="btn btn-primary btn-xl page-scroll">Descubra mais!</a>
+        <a href="#sobre" class="btn btn-primary btn-xl page-scroll" ng-click="methods.scrollToHash('about')">Descubra mais!</a>
       </div>
     </div>
   </header>
@@ -43,17 +43,112 @@
   <section class="bg-primary" id="about">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 text-center">
+        <div class="col-sm-7 col-md-7 col-lg-7 text-center">
           <h2 class="section-heading">Nós podemos te ajudar!</h2>
           <hr class="light">
-          <p class="text-faded">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <a href="#specialities" class="btn btn-default btn-xl page-scroll ">Vamos começar!</a>
+          <p class="text-faded text-left text-indent">
+            A NeuroTois tem como missão proporcionar o tratamento fisioterapêutico em adultos com diversas disfunções neurológicas, através da aplicação das técnicas mais atuais e inovadoras, de comprovada evidência científica na área da fisioterapia, como recursos cinesioterápicos, desde os tradicionais kabat, bola suíça, treino de marcha, treino sensório-motor ( equilíbrio e propriocepção ) e também exercícios com pesos, elásticos, até equipamentos de musculação, bicicletas e esteiras ergométricas e exercícios de pilates e Reeducação Postural Global (R.P.G). Além disso, oferece orientação e supervisão prática para terapeutas, pais e cuidadores de pacientes com disfunção neurológica.
+            Nosso trabalho difere dos tradicionais por acreditar que sempre é possível melhorar muito a vida do paciente neurológico, proporcionando o máximo de independência.
+            <ul class="text-left">
+              <li>
+                Esperança de recuperação. Ninguém sabe e garante o futuro, mas o incerto é melhor que o nunca
+              </li>
+              <li>
+                Grande estimulação externa do sistema nervoso para promover sua reorganização
+              </li>
+              <li>
+                Trabalhar o máximo possível em pé ou sentado
+              </li>
+              <li>
+                Contrações musculares aumentadas e usadas para construir massa muscular e controle
+              </li>
+              <li>
+                Exercícios com aumento de carga são executados em todas as sessões
+              </li>
+              <li>
+                No pior dos casos o cliente fica saudável e mais independente
+              </li>
+              <li>
+                No melhor dos casos o cliente começa a recuperar suas funções e continua a melhorar até ficar sem limitações
+              </li>
+            </ul>
+          </p>
+        </div>
+        <div class="col-sm-5 col-md-5 col-lg-5 text-center">
+          <ul class="carousel" 
+              rn-carousel
+              rn-carousel-buffered
+              rn-carousel-auto-slide
+              rn-carousel-duration="500"
+              rn-carousel-controls-allow-loop
+              rn-carousel-easing="easeInQuart"
+              rn-carousel-index="carouselIndex">
+            <li ng-repeat="image in clinicImages">
+              <div class="layer" ng-style="{ 'background-image': 'url(' + image + ')' }"></div>
+            </li>
+          </ul>
+          <div rn-carousel-indicators ng-if="clinicImages.length > 1" slides="clinicImages" rn-carousel-index="carouselIndex"></div>
+          <a href="#specialities" class="btn btn-default btn-xl page-scroll btn-right" ng-click="methods.scrollToHash('specialities')">Vamos começar!</a>
         </div>
       </div>
     </div>
+  </section>
+
+  <section class="bg-3" id="specialities">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 text-center">
+          <h2 class="section-heading">Especialidades</h2>
+          <hr class="dark">
+          <p class="text-left text-indent">
+            TEA (transtornos do espectro autista): autismo clássico, Asperger e distúrbio global do desenvolvimento sem outra especificação – Dr. Fábio Souza – CREFITO 3/87654-X
+          </p>
+          <p class="text-left text-indent">
+            Lesão encefálica adquirida infantil e adulto: AVE (acidente vascular encefálico), TCE (traumatismo cranioencefálico) – Dr. Vinicius Ferreira – CREFITO 3/65429-X
+          </p>
+          <p class="text-left text-indent">
+            Doenças neuromusculares: ELA (esclerose lateral amiotrófica), EM (esclerose múltipla), miopatias, SPP (síndrome pós polio), Guillain Barré, distrofia muscular (Becker, cinturas, Duchenne, facio-escapulo-umeral – Dra. Juliana Nery – CREFITO 3/09275-X
+          </p>
+          <p class="text-left text-indent">
+            Parkinson e Alzheimer – Dra. Marina Malheiros – CREFITO 3/72553-X
+          </p>
+          <p class="text-left text-indent">
+            Reabilitação Vestibular (Labirintite); Paralisia cerebral e Lesão medular – Dra. Iara Soares – CREFITO 3/20038-X	
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-primary bg-professionals" id="professionals">
+    <div class="row row-wall">
+      <div class="col-lg-8 col-lg-offset-2 text-center">
+        <h2 class="section-heading">Profissionais</h2>
+        <hr class="light">
+      </div>
+    </div>
+    <ul class="image-wall">
+      <div class="first-col">
+        <div class="sm-image" ng-style="{ 'background-image': 'url(' + images[1] + ')' }"></div>
+        <div class="sm-image" ng-style="{ 'background-image': 'url(' + images[2] + ')' }"></div>
+        <div class="md-image" ng-style="{ 'background-image': 'url(' + images[3] + ')' }"></div>
+      </div>
+      <div class="second-col">
+        <div class="lg-image" ng-style="{ 'background-image': 'url(' + images[4] + ')' }"></div>
+      </div>
+      <div class="third-col">
+        <div class="md-image right-image up-image" ng-style="{ 'background-image': 'url(' + images[5] + ')' }"></div>
+        <div class="sm-image-right" ng-style="{ 'background-image': 'url(' + images[6] + ')' }"></div>
+        <div class="sm-image-right" ng-style="{ 'background-image': 'url(' + images[7] + ')' }"></div>
+      </div>
+    </ul>
+    <!-- <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 text-center">
+          <h2 class="section-heading">Profissionais</h2>
+        </div>
+      </div>
+    </div> -->
   </section>
 
 
@@ -67,30 +162,30 @@
         </div>
         <div class="col-lg-4 col-lg-offset-2 text-center">
           <i data-toggle="tooltip" title="Telefone" class="fa fa-phone fa-3x wow bounceIn"></i>
-          <p data-toggle="tooltip" title="Telefone">123-456-6789</p>
+          <p data-toggle="tooltip" title="Telefone">(14) 9 7543-8237</p>
         </div>
         <div class="col-lg-4 text-center">
           <i data-toggle="tooltip" title="E-mail" class="fa fa-envelope-o fa-3x wow bounceIn" 
           data-wow-delay=".1s"></i>
           <p data-toggle="tooltip" title="E-mail"><a href="mailto:matheusb95@gmail.com">
-            feedback@clinica.com</a></p>
+            contato.neurotois@gmail.com</a></p>
           </div>
-          <!-- <div class="foot-top">
+          <div class="foot-top">
             <div class="col-md-6 s-c social-ui">
               <ul>
                 <li>
                   <div class="social-ic">
                     <ul>
-                      <li><a href="#"><i class="facebok"> </i></a></li>
-                      <li><a href="#"><i class="twiter"> </i></a></li>
-                      <li><a href="#"><i class="goog"> </i></a></li>
-                      <li><a href="#"><i class="be"> </i></a></li>
+                      <li><a href="https://www.facebook.com/NeuroTois" target="_blank"><i class="facebook"> </i></a></li>
+                      <li><a href="https://www.twitter.com/NeuroTois" target="_blank"><i class="twitter"> </i></a></li>
+                      <li><a href="https://www.google.com/+/NeuroTois" target="_blank"><i class="goog"> </i></a></li>
+                      <li><a href="https://www.instagram.com/NeuroTois" target="_blank"><i class="be"> </i></a></li>
                     </ul>
                   </div>
                 </li>
               </ul>
             </div>
-          </div> -->
+          </div>
         </div>
       </div>
     </section>
